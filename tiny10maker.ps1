@@ -85,7 +85,7 @@ if (! $myWindowsPrincipal.IsInRole($adminRole))
 }
 # Download Windows 10 compatible autounattend.xml
 if (-not (Test-Path -Path "$PSScriptRoot/autounattend.xml")) {
-    Invoke-RestMethod "https://raw.githubusercontent.com/ntdevlabs/tiny10builder/refs/heads/main/autounattend.xml" -OutFile "$PSScriptRoot/autounattend.xml"
+    Invoke-RestMethod "https://raw.githubusercontent.com/samenoko-112/tiny11and10builder/refs/heads/main/autounattend_10.xml" -OutFile "$PSScriptRoot/autounattend.xml"
 }
 # Start the transcript and prepare the window
 Start-Transcript -Path "$PSScriptRoot\tiny10_$(get-date -f yyyyMMdd_HHmms).log"
